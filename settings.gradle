@@ -1,0 +1,2 @@
+rootProject.name='Jajanin'
+include ':app'
