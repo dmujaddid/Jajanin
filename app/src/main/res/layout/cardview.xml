@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dimen5"
+    android:layout_marginRight="@dimen/dimen5"
+    android:layout_marginTop="@dimen/dimen10"
+    android:layout_marginBottom="@dimen/dimen10">
+
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dimen10">
+
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="@dimen/dimen90"
+            android:layout_height="@dimen/dimen70"
+            android:layout_marginRight="@dimen/dimen15"
+            android:layout_marginEnd="@dimen/dimen15"
+            android:scaleType="centerCrop"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="@dimen/dimen0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                android:id="@+id/nama"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="@dimen/dimen200"
+                android:layout_height="wrap_content" />
+
+
+                <TextView
+                android:id="@+id/alamat"
+                android:layout_width="@dimen/dimen200"
+                android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+        <Button
+            android:id="@+id/chat"
+            android:layout_width="@dimen/dimen70"
+            android:layout_height="@dimen/dimen40"
+            android:layout_marginRight="@dimen/dimen20"
+            android:layout_marginEnd="@dimen/dimen80"
+
+            android:visibility="invisible"
+            android:text="@string/chat"/>
+
+             </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

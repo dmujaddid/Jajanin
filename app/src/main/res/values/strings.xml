@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Jajanin</string>
+
+
+
+    <string name="nama">Nama : </string>
+    <string name="alamat">Alamat : </string>
+    <string name="chat">Chat</string>
 </resources>
