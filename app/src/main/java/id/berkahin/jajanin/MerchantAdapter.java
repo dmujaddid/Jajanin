@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
-
 import java.util.ArrayList;
 
 public class MerchantAdapter extends RecyclerView.Adapter<MerchantAdapter.MyViewHolder> {
@@ -36,6 +35,7 @@ public class MerchantAdapter extends RecyclerView.Adapter<MerchantAdapter.MyView
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         holder.nama.setText(merchants.get(position).getNama());
+        holder.harga.setText(merchants.get(position).getHarga());
         holder.alamat.setText(merchants.get(position).getAlamat());
         Picasso.get().load(merchants.get(position).getFoto()).into(holder.foto);
         if(merchants.get(position).getPermission()) {
@@ -51,12 +51,13 @@ public class MerchantAdapter extends RecyclerView.Adapter<MerchantAdapter.MyView
 
     class MyViewHolder extends RecyclerView.ViewHolder
     {
-        TextView nama, alamat;
+        TextView nama, alamat, harga;
         ImageView foto;
         Button btn;
         public MyViewHolder(View itemView) {
             super(itemView);
             nama = (TextView) itemView.findViewById(R.id.nama);
+            harga = (TextView) itemView.findViewById(R.id.harga);
             alamat = (TextView) itemView.findViewById(R.id.alamat);
             foto = (ImageView) itemView.findViewById(R.id.foto);
             btn = (Button) itemView.findViewById(R.id.chat);

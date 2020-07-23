@@ -5,15 +5,17 @@ public class Merchant {
     private String alamat;
     private String foto;
     private boolean permission;
+    private String harga;
 
     public Merchant() {
     }
 
-    public Merchant(String nama, String alamat, String foto, boolean permission) {
+    public Merchant(String nama, String alamat, String foto, boolean permission, String harga) {
         this.nama = nama;
         this.alamat = alamat;
         this.foto = foto;
         this.permission = permission;
+        this.harga = harga;
     }
 
     public String getNama() {
@@ -47,4 +49,14 @@ public class Merchant {
     public void setPermission(boolean permission) {
         this.permission = permission;
     }
+
+    public String getHarga() {
+        return harga;
+    }
+
+    public void setHarga(String harga) {
+        this.harga = harga;
+    }
+
+
 }
