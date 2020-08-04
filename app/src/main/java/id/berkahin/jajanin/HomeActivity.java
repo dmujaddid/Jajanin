@@ -17,7 +17,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 
-public class MainActivity extends AppCompatActivity {
+public class HomeActivity extends AppCompatActivity {
 
     DatabaseReference reference;
     RecyclerView recyclerView;
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_home);
 
         recyclerView = (RecyclerView) findViewById(R.id.myRecycler);
         recyclerView.setLayoutManager( new LinearLayoutManager(this));
@@ -42,13 +42,13 @@ public class MainActivity extends AppCompatActivity {
                     Merchant p = dataSnapshot1.getValue(Merchant.class);
                     list.add(p);
                 }
-                adapter = new MerchantAdapter(MainActivity.this,list);
+                adapter = new MerchantAdapter(HomeActivity.this,list);
                 recyclerView.setAdapter(adapter);
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(MainActivity.this, "Opsss....Maaf terjadi kesalahan", Toast.LENGTH_SHORT).show();
+                Toast.makeText(HomeActivity.this, "Opsss....Maaf terjadi kesalahan", Toast.LENGTH_SHORT).show();
             }
         });
     }
