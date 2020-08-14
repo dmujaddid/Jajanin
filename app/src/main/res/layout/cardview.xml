@@ -5,10 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_marginLeft="@dimen/dimen5"
     android:layout_marginRight="@dimen/dimen5"
     android:layout_marginTop="@dimen/dimen10"
-    android:layout_marginBottom="@dimen/dimen10">
+    android:layout_marginBottom="@dimen/dimen10"
+    app:cardCornerRadius="@dimen/dimen8">
 
 
     <LinearLayout
@@ -18,7 +20,7 @@
         android:orientation="horizontal"
         android:padding="@dimen/dimen10">
 
-        <!-- foto produk/merchant -->
+        <!-- foto produk -->
         <ImageView
             android:id="@+id/foto"
             android:layout_width="@dimen/dimen100"
@@ -26,34 +28,38 @@
             android:layout_marginRight="@dimen/dimen15"
             android:layout_gravity="center_vertical"
             android:layout_marginEnd="@dimen/dimen15"
-
             android:scaleType="centerCrop"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <LinearLayout
-                android:layout_width="150dp"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
-                <!-- Nama Merchant/Produk -->
+                <!-- Nama Produk -->
                 <TextView
                 android:id="@+id/nama"
                 android:fontFamily="@font/poppins_bold"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen14"
-                    />
+                    android:textColor="@color/colorJudul"
+                    android:paddingBottom="@dimen/dimen2"
+                android:textSize="@dimen/font16"/>
 
+                <!-- Harga Produk -->
                 <TextView
                     android:id="@+id/harga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/dimen11"
+                    android:textSize="14sp"
+                    android:textColor="@color/colorDesc"
+                    android:paddingBottom="@dimen/dimen1"
                     android:textStyle="bold"
                     />
 
@@ -62,34 +68,15 @@
                 android:id="@+id/alamat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                    android:textSize="@dimen/dimen11" />
+                    android:fontFamily="@font/roboto_regular"
+                    android:textColor="@color/colorDesc"
+                    android:textSize="14sp" />
 
             </LinearLayout>
-
-            <LinearLayout
-
-            android:layout_width="@dimen/dimen60"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginLeft="@dimen/dimen10"
-            android:layout_marginStart="@dimen/dimen10"
-                >
-
-                <Button
-                    android:id="@+id/chat"
-                    android:layout_width="wrap_content"
-                    android:layout_height="@dimen/dimen40"
-                    android:visibility="invisible"
-                    android:text="@string/chat"
-                    android:textSize="@dimen/dimen10"/>
-
-             </LinearLayout>
-
 
 
         </LinearLayout>
 
     </LinearLayout>
-
 
 </androidx.cardview.widget.CardView>
